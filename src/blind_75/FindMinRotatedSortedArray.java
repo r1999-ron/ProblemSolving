@@ -1,5 +1,43 @@
 package blind_75;
+/*
+* ### How it Works
+1. **Initialize Pointers**:
+    - : Points to the start of the array `low`
+    - : Points to the end of the array `high`
 
+2. **Binary Search Loop**:
+    - Continues while `low < high`
+    - Calculates middle point using `mid = low + (high-low)/2`
+
+3. **Decision Making**:
+    - If :
+        - Minimum must be in right half
+        - Move to `low``mid + 1`
+
+`nums[mid] > nums[high]`
+    - Otherwise:
+        - Minimum must be in left half (including mid)
+        - Move to `high``mid`
+
+### Example
+For input array `[8, 1, 3, 4, 5]`:
+```
+Initial: low=0, high=4
+Step 1: mid=2, nums[mid]=3, nums[high]=5
+        3 < 5, so high = mid (2)
+Step 2: mid=1, nums[mid]=1, nums[high]=3
+        1 < 3, so high = mid (1)
+Step 3: low=0, high=1
+        mid=0, nums[mid]=8, nums[high]=1
+        8 > 1, so low = mid + 1 (1)
+Final: low=high=1, return nums[1] = 1
+```
+### Time & Space Complexity
+- Time Complexity: O(log n)
+- Space Complexity: O(1)
+
+The algorithm efficiently finds the minimum element by leveraging the properties of a rotated sorted array and using binary search principles.
+*/
 public class FindMinRotatedSortedArray {
     public static void main(String[] args) {
         int[] nums = {8, 1, 3, 4, 5};

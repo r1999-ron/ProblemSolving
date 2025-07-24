@@ -1,5 +1,28 @@
 package blind_75;
+/*### How It Works
+1. **Floyd's Algorithm** uses two pointers:
+    - pointer moves one step at a time `slow`
+    - pointer moves two steps at a time `fast`
 
+2. **Cycle Detection Logic**:
+    - If there's a cycle, the fast pointer will eventually catch up to the slow pointer
+    - If there's no cycle, the fast pointer will reach the end of the list
+
+3. **Test Cases** in main method:
+    - Test Case 1: Creates a linked list with a cycle: 3 → 2 → 0 → -4 → 2 (cycles back)
+    - Test Case 2: Creates a linear linked list: 1 → 2 → 3
+
+### Time and Space Complexity
+- Time Complexity: O(n), where n is the number of nodes
+- Space Complexity: O(1), uses only two pointers regardless of list size
+
+### Example Output
+```
+Test case 1 - Has cycle: true
+Test case 2 - Has cycle: false
+```
+This algorithm is very efficient for detecting cycles in linked lists as it uses constant extra space and doesn't modify the original list structure
+*/
 public class DetectCycleLinkedList {
     static class ListNode {
         int val;

@@ -1,5 +1,25 @@
 package blind_75;
+/*### Key Features
+1. **Binary Search Modification**: Uses binary search but with additional logic to handle rotation
+2. **Two-Part Analysis**:
+    - First determines which half is sorted
+    - Then checks if target lies in the sorted portion
 
+### Example Walk-through
+Using array `[4,5,6,7,0,1,2]` with target `0`:
+1. Initial state: `left=0, right=6, mid=3`
+2. `nums[mid]=7`
+3. Left side `[4,5,6,7]` is sorted
+4. Target `0` is not in range `[4,7]`, so search right half
+5. Next iteration: `left=4, right=6`
+6. Eventually finds target at index 4
+
+### Time & Space Complexity
+- Time Complexity: O(log n)
+- Space Complexity: O(1)
+
+The algorithm maintains the efficient logarithmic time complexity of binary search while handling the added complexity of rotation.
+*/
 public class SearchInRotatedSortedArray {
     public static void main(String[] args) {
         int[] nums = {4,5,6,7,0,1,2};

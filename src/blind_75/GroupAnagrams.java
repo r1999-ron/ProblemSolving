@@ -1,5 +1,29 @@
 package blind_75;
+/*
+* - Uses a HashMap where:
+    - Key: sorted version of the string
+    - Value: list of original strings that share the same sorted form
 
+- For each string:
+    - Converts to char array
+    - Sorts the characters (making "eat" and "tea" both become "aet")
+    * - If sorted string isn't in map, creates new list
+- Adds original string to appropriate list
+* - Returns all grouped anagrams as a list of lists
+
+* ### Example
+For input `["eat", "tea", "tan", "ate", "nat", "bat"]`:
+- "eat", "tea", "ate" → sorted as "aet" → grouped together
+- "tan", "nat" → sorted as "ant" → grouped together
+- "bat" → sorted as "abt" → in its own group
+
+### Complexity
+- Time: O(n * k * log k), where n is number of strings and k is max length of any string
+- Space: O(n * k) for storing all strings in the HashMap
+
+
+
+*/
 import java.util.*;
 
 public class GroupAnagrams {
