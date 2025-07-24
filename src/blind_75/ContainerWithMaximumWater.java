@@ -1,6 +1,6 @@
 package blind_75;
 
-public class ContainWithMaximumWater {
+public class ContainerWithMaximumWater {
     public static void main(String[] args) {
         int[] nums = {5,2,4,2,6,3};
         System.out.println(maxArea(nums));
