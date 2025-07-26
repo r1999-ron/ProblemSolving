@@ -4,7 +4,26 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
-
+/*
+* /**
+ * A class to solve the "Next Greater Element I" problem.
+ *
+ * Given two arrays `nums1` and `nums2`, where `nums1` is a subset of `nums2`,
+ * for each element in `nums1`, this program finds the next greater element in `nums2`.
+ * The next greater element of a number x in `nums2` is the first greater number to the
+ * right of x in the same array. If no such number exists, return -1 for that element.
+ *
+ * Time Complexity: O(m + n), where n is the length of nums2 and m is the length of nums1.
+ * Space Complexity: O(n) for stack and hashmap.
+ *
+ * Example:
+ * Input: nums1 = [4,1,2], nums2 = [1,3,4,2]
+ * Output: [-1,3,-1]
+ *
+ * Approach:
+ * - Use a monotonic decreasing stack to pre-process nums2 and map each number to its next greater element.
+ * - Use a hashmap for O(1) lookup for each element in nums1.
+ **/
 public class NextGreaterElement {
     public static void main(String[] args) {
 
