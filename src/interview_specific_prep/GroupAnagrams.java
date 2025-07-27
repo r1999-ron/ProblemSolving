@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*
 * - Uses a HashMap where:
     - Key: sorted version of the string

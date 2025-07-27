@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 
 import java.util.ArrayList;
 import java.util.Arrays;

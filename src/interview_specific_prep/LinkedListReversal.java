@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*### How the Reversal Works
 For input list `1 -> 2 -> 3`:
 1. **Initial state**:

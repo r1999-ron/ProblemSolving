@@ -1,6 +1,4 @@
-package blind_75;
-
-import com.sun.source.tree.Tree;
+package interview_specific_prep;
 
 public class ValidateBST {
     public static void main(String[] args) {

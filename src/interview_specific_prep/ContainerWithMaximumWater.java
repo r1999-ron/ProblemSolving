@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*
 * ### Problem Description
 This problem aims to find two vertical lines and the x-axis that forms a container that can hold the maximum amount of water. The input array represents the height of vertical lines, where the index represents the x-coordinate.

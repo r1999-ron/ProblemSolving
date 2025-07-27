@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*
 * ### Problem Description
 - You are given an array of prices where `prices[i]` is the price of a stock on day i

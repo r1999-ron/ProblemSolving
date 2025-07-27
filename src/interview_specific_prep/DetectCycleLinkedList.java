@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*### How It Works
 1. **Floyd's Algorithm** uses two pointers:
     - pointer moves one step at a time `slow`

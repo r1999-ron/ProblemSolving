@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*
 * The code finds the length of the longest substring containing the same letter that can be created after performing at most character replacements. `k`
 * ### How it Works

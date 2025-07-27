@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 
 class TreeNode {
     int val;

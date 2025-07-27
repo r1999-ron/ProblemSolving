@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 
 public class MaxDepthBinaryTree {
     public static void main(String[] args){

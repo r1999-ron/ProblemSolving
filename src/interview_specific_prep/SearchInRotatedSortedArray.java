@@ -1,4 +1,4 @@
-package blind_75;
+package interview_specific_prep;
 /*### Key Features
 1. **Binary Search Modification**: Uses binary search but with additional logic to handle rotation
 2. **Two-Part Analysis**:
