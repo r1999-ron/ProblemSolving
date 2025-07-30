@@ -2,7 +2,7 @@ package interview_specific_prep;
 
 public class LongestSubstringWithoutRepeatingChars {
     public static void main(String[] args){
-        String s = "abcabcbb";
+        String s = "workattech";
         System.out.println(lengthOfLongestSubstring(s));
     }
     private static int lengthOfLongestSubstring(String s){
