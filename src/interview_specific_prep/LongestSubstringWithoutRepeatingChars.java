@@ -1,27 +1,27 @@
 package interview_specific_prep;
 
+import java.util.HashSet;
+
 public class LongestSubstringWithoutRepeatingChars {
     public static void main(String[] args){
         String s = "workattech";
         System.out.println(lengthOfLongestSubstring(s));
     }
     private static int lengthOfLongestSubstring(String s){
-        int left = 0, maxLength = 0;
-        boolean[] seen = new boolean[256]; // ASCII
+        int left=0, right=0, maxLength=0;
+        HashSet<Character> set = new HashSet<>();
+        while(right < s.length()){
+            char curr = s.charAt(right);
+            if(!set.contains(curr)){
+                set.add(curr);
+                maxLength = Math.max(maxLength, right-left+1);
+                right++;
 
-        for (int right = 0; right < s.length(); right++) {
-            char currChar = s.charAt(right);
-
-
-            while (seen[currChar]) {
-                seen[s.charAt(left)] = false;
+            }else{
+                set.remove(s.charAt(left));
                 left++;
             }
-
-            seen[currChar] = true;
-            maxLength = Math.max(maxLength, right - left + 1);
         }
-
         return maxLength;
     }
 }

@@ -14,31 +14,24 @@ public class MergeIntervals {
         }
     }
 
-    private static int[][] merge(int[][] intervals){
-        if (intervals.length == 0) return new int[0][0];
-
-        // Step 1: Sort intervals by start time
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
-
+    private static int[][] merge(int[][] intervals) {
+        if(intervals.length == 0) return new int[0][0];
+        Arrays.sort(intervals, (a,b) -> a[0] - b[0]);
         List<int[]> merged = new ArrayList<>();
-
-        // Step 2: Merge intervals
-        int[] current = intervals[0];
-        for (int i = 1; i < intervals.length; i++) {
-            if (intervals[i][0] <= current[1]) {
-                // Merge
-                current[1] = Math.max(current[1], intervals[i][1]);
-            } else {
-                // No overlap, push current and update
-                merged.add(current);
-                current = intervals[i];
+        int start = intervals[0][0]; // 1
+        int end = intervals[0][1];  // 3
+        for(int i=1; i<intervals.length; i++){
+            int currStart = intervals[i][0]; // 2
+            int currEnd = intervals[i][1]; // 6
+            if(currStart <= end){
+                end = Math.max(end, currEnd); //6
+            }else{
+                merged.add(new int[]{start, end}); //[1,6]
+                start = currStart;
+                end = currEnd;
             }
         }
-
-        // Add last interval
-        merged.add(current);
-
-        // Convert to array
+        merged.add(new int[]{start, end});
         return merged.toArray(new int[merged.size()][]);
     }
 }
