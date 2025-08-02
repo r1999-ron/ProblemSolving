@@ -3,7 +3,7 @@ package interview_specific_prep;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class NumberOfIslands {
+public class NumberOfIslandsBFS {
     public static void main(String[] args) {
         System.out.println(countIslands(new int[][]{
                 { 1, 1, 1, 0, 0 },
