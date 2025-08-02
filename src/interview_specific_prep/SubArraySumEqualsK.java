@@ -15,13 +15,13 @@ public class SubArraySumEqualsK {
         int count = 0;
         int currentSum = 0;
         HashMap<Integer, Integer> map = new HashMap<>();
-        map.put(0,1);
+        map.put(0,1); // {0->1}
         for(int num : nums){
-            currentSum += num;
+            currentSum += num; //6
             if(map.containsKey(currentSum-k)){
-                count += map.get(currentSum-k);
+                count += map.get(currentSum-k); // 2
             }
-            map.put(currentSum, map.getOrDefault(currentSum, 0) + 1);
+            map.put(currentSum, map.getOrDefault(currentSum, 0) + 1); // {1->1, 3->1,6->1}
         }
         return count;
     }

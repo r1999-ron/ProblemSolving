@@ -50,7 +50,7 @@ public class FirstMissingPositive {
     }
 
     private static int firstMissingPositive(int[] nums) {
-        int n = nums.length;
+        int n = nums.length; //4
         for(int i=0; i<n; i++){
             while (nums[i] > 0 && nums[i] <=n && nums[nums[i]-1] != nums[i]){
                 int temp = nums[nums[i]-1];
