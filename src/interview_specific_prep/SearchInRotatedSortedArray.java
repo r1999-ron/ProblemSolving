@@ -7,6 +7,9 @@ package interview_specific_prep;
 
 ### Example Walk-through
 Using array `[4,5,6,7,0,1,2]` with target `0`:
+
+
+
 1. Initial state: `left=0, right=6, mid=3`
 2. `nums[mid]=7`
 3. Left side `[4,5,6,7]` is sorted
