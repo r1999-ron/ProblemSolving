@@ -12,9 +12,9 @@ public class FirstNonRepeatingCharacterString {
         for (char c : s.toCharArray()) {
             charMap.put(c, charMap.getOrDefault(c, 0) + 1);
         }
-        for(Map.Entry<Character, Integer> entry : charMap.entrySet()){
-            if(entry.getValue() == 1){
-                return entry.getKey();
+        for (char c : s.toCharArray()) {
+            if (charMap.get(c) == 1) {
+                return c;
             }
         }
         return null;
