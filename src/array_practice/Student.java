@@ -1,13 +1,15 @@
 package array_practice;
 
-public class Student {
+class Student {
     int studentId;
     String name, subject;
+  //  double salary;
 
-    public Student(int studentId, String name, String subject) {
-        this.studentId = studentId;
+    Student(int id, String name, String subject) {
+        this.studentId = id;
         this.name = name;
         this.subject = subject;
+       // this.salary = salary;
     }
 
     @Override
@@ -16,6 +18,7 @@ public class Student {
                 "studentId=" + studentId +
                 ", name='" + name + '\'' +
                 ", subject='" + subject + '\'' +
+               // ", salary=" + salary +
                 '}';
     }
 }
